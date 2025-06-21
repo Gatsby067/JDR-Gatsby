@@ -1,8 +1,14 @@
 import streamlit as st
 from openai import OpenAI
 import json
+from dotenv import load_dotenv
+import os
 
-client = OpenAI(api_key="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")
+load_dotenv()  # charge les variables du fichier .env
+
+api_key = os.getenv("OPENAI_API_KEY")
+
+client = OpenAI(api_key=api_key)
 
 st.title("Baradduur")
 
