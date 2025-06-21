@@ -80,7 +80,12 @@ if user_input:
     with st.chat_message("assistant"):
         st.markdown(assistant_reply)
 
-if st.button("Exporter la partie en JSON"):
-    json_data = json.dumps(st.session_state.messages, indent=2, ensure_ascii=False)
-    st.download_button("Télécharger le fichier JSON", data=json_data, file_name="sauvegarde_jdr.json", mime="application/json")
-    st.code(json_data, language="json")
+# --- BOUTON POUR TÉLÉCHARGER LA SAUVEGARDE EN JSON ---
+json_data = json.dumps(st.session_state.messages, indent=2, ensure_ascii=False)
+st.download_button(
+    label="📥 Télécharger la sauvegarde JSON",
+    data=json_data,
+    file_name="sauvegarde_jdr.json",
+    mime="application/json"
+)
+
