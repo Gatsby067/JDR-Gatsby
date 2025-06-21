@@ -77,7 +77,7 @@ if user_input:
 if len(st.session_state.messages) > 20:
     résumé = client.chat.completions.create(
         model="gpt-4o",
-        messages=st.session_state.messages[:-10] + [{"role": "user", "content": "Résume les événements précédents en notant : les pièces d'or, les objets, les rencontres, les caractères des personnages, les interactions, les actions effectué, les lieux visités, les détails important pour la suite"}]
+        messages=st.session_state.messages[:-10] + [{"role": "user", "content": "Résume les événements précédents en notant : les pièces d'or, les objets, les personnages et leurs caractères, les interactions, les actions effectué, les lieux visités, les détails important pour la suite"}]
     ).choices[0].message.content
 
     st.session_state.messages = [
