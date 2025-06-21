@@ -81,7 +81,7 @@ if user_input:
         st.markdown(assistant_reply)
 
 if len(st.session_state.messages) > 20:
-    résumé = openai.chat.completions.create(
+    résumé = client.chat.completions.create(
         model="gpt-4o",
         messages=st.session_state.messages[:-10] + [{"role": "user", "content": "Résume les événements précédents de manière synthétique"}]
     ).choices[0].message.content
