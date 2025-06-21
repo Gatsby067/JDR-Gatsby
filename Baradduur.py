@@ -79,7 +79,7 @@ if len(st.session_state.messages) > 20:
 # --- BOUTON POUR TÉLÉCHARGER LA SAUVEGARDE EN JSON ---
 json_data = json.dumps(st.session_state.messages, indent=2, ensure_ascii=False)
 st.download_button(
-    label="📥 Télécharger la sauvegarde JSON",
+    label="📥 Télécharger la sauvegarde",
     data=json_data,
     file_name="sauvegarde_jdr.json",
     mime="application/json"
