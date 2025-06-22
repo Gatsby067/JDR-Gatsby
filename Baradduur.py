@@ -4,7 +4,7 @@ import json
 from dotenv import load_dotenv
 import os
 
-regles = """T'es réponse ne dépasse pas 100 mots
+regles = """Tes réponses ne dépassent pas 100 mots
 
 Tu es un maître du jeu de rôle médiéval-fantastique, dur et expérimenté. L'univers est sombre, cruel, inspiré du Moyen Âge, avec un ton narratif sérieux, synthétique et immersif.
 
