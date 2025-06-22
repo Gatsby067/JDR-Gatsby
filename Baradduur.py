@@ -60,7 +60,7 @@ for msg in st.session_state.messages[1:]:
 user_input = st.chat_input("Entrez votre action...")
 
 if user_input:
-    st.session_state.messages.append({"role": "user", "content": "Ta réponse doit faire moins de 100 mots :", user_input})
+    st.session_state.messages.append({"role": "user", "content": user_input})
 
     response = client.chat.completions.create(
         model="gpt-4o",
@@ -77,7 +77,7 @@ if user_input:
 if len(st.session_state.messages) > 20:
     résumé = client.chat.completions.create(
         model="gpt-4o",
-        messages=st.session_state.messages[:-10] + [{"role": "user", "content": "Résume les événements en actualisant ces éléments au résumé précedent : les pièces d'or, les objets, les actions éffectuées, les personnages, leurs caractères et les actions effectuées avec, les lieux visités, les détails important pour la suite"}]
+        messages=st.session_state.messages[:-10] + [{"role": "user", "content": "Résume les événements en gardant tous les éléments du résumé précedent et en actualisant si besoin : les pièces d'or, les objets, les actions éffectuées, les personnages, leurs caractères et les actions effectuées avec, les lieux visités, les détails important pour la suite"}]
     ).choices[0].message.content
 
     st.session_state.messages = [
