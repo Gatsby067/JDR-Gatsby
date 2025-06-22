@@ -60,7 +60,7 @@ for msg in st.session_state.messages[1:]:
 user_input = st.chat_input("Entrez votre action...")
 
 if user_input:
-    st.session_state.messages.append({"role": "user", "content": "Ta réponse doit faire moins de 100 mots :", user_input})
+    st.session_state.messages.append({"role": "user", "content": user_input})
 
     response = client.chat.completions.create(
         model="gpt-4o",
