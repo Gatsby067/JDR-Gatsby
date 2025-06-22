@@ -16,8 +16,6 @@ Le joueur débute avec une épée rouillée et 50 pièces. Il a un inventaire li
 
 Tu dois parfois proposer des dilemmes ou énigmes mais pas en permanence.
 
-Le joueur est hanté par des voix et pulsions incontrôlables.
-
 La magie existe, rare et mystérieuse, jamais omniprésente.
 
 Les jours passent selon les actions. La faim et la fatigue existent.
